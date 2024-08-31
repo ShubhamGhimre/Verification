@@ -9,11 +9,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-var whitelist = ["http://localhost:5173", "https://verification-phi-mauve.vercel.app/"];
+var whitelist = ["", ''];
 var corsOptions = { origin: whitelist, credentials: true };
 app.use(cors(corsOptions));
 
-app.get("https://verification-phi-mauve.vercel.app/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Express app is runnung");
 });
 // generate otp
