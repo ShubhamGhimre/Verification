@@ -48,7 +48,7 @@ const Verification = () => {
       console.log(codes.join(""));
       const otp = codes.join("");
 
-      fetch("https://verification-jdkvlu6za-shubham-ghimires-projects.vercel.app/verify", {
+      fetch("http://localhost:5000/verify", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const Verification = () => {
   };
 
   const sendCode = () => {
-    fetch("https://verification-jdkvlu6za-shubham-ghimires-projects.vercel.app/sendcode", {
+    fetch("http://localhost:5000/sendcode", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
