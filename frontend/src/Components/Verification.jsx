@@ -48,7 +48,7 @@ const Verification = () => {
       console.log(codes.join(""));
       const otp = codes.join("");
 
-      fetch("https://playful-kheer-09c610.netlify.app/verify", {
+      fetch("https://verification-jdkvlu6za-shubham-ghimires-projects.vercel.app/verify", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const Verification = () => {
   };
 
   const sendCode = () => {
-    fetch("https://playful-kheer-09c610.netlify.app/sendcode", {
+    fetch("https://verification-jdkvlu6za-shubham-ghimires-projects.vercel.app/sendcode", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
