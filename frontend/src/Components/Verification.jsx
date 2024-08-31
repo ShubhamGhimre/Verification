@@ -114,9 +114,9 @@ const Verification = () => {
         ))}
       </div>
       {error ? (
-        <p className="text-red-500">{error}</p>
+        <p className="bg-red-500 text-slate-100 p-3 rounded-md">{error}</p>
       ) : success ? (
-        <p className="text-green-500">{success}</p>
+        <p className="bg-green-500 text-slate-100 p-3 rounded-md">{success}</p>
       ) : null}
 
       {/* Buttons */}
