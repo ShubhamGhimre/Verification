@@ -1,9 +1,17 @@
 const port = 5000;
 const express = require("express");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+var whitelist = ["http://localhost:5173", ""];
+var corsOptions = { origin: whitelist, credentials: true };
+app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.send("Express app is runnung");
