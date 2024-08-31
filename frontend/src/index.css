@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.input_field{
+    @apply h-10 w-10 border border-gray-500 rounded-md shadow-lg text-black text-center text-2xl cursor-pointer 
+}
+
+.input_field:invalid{
+    border: 2px dashed red;
+}
+.input_field:invalid{
+    border: 2px solid black;
+}
