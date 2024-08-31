@@ -1,4 +1,4 @@
-const port = 5000;
+
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -68,7 +68,7 @@ app.post("/verify", (req, res) => {
   }
 });
 
-app.listen(port, (error) => {
+app.listen(process.env.PORT || 5000 , (error) => {
   if (!error) {
     console.log("server is running on port " + port);
   } else {
