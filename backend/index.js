@@ -1,15 +1,15 @@
-
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
+
 app.use(express.json());
 app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-var whitelist = ["", ''];
+var whitelist = ["", 'https://validation-backend.vercel.app/'];
 var corsOptions = { origin: whitelist, credentials: true };
 app.use(cors(corsOptions));
 
@@ -51,7 +51,6 @@ app.post("/verify", (req, res) => {
   const userOTP = req.body.otp;
   console.log(`User entered OTP: ${userOTP}`);
 
-
   const OTP = otp;
   console.log(`OTP: ${OTP}`);
 
@@ -70,7 +69,7 @@ app.post("/verify", (req, res) => {
 
 app.listen(process.env.PORT || 5000 , (error) => {
   if (!error) {
-    console.log("server is running on port " + port);
+    console.log("server is running on port " + 5000);
   } else {
     console.log("Error in running server", +error);
   }

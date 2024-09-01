@@ -48,7 +48,7 @@ const Verification = () => {
       console.log(codes.join(""));
       const otp = codes.join("");
 
-      fetch("http://localhost:5000/verify", {
+      fetch("https://validation-backend.vercel.app/verify", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const Verification = () => {
   };
 
   const sendCode = () => {
-    fetch("http://localhost:5000/sendcode", {
+    fetch("https://validation-backend.vercel.app/sendcode", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
